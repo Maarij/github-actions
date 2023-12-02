@@ -20,4 +20,6 @@
 
 * Most events are repository related but others exist such as workflow/schedule related.
 * Workflow triggers: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+* Activity types and Event Filters give more control over workflow triggers
+  * Documentation contains activity types that can be used on a webhook event
 * 

@@ -15,3 +15,9 @@
 * Each job can contain multiple `steps` that run sequentially. The GitHub Marketplace is a good place to find common
   actions such as `actions/checkout@v3` to checkout your repo from the build server.
 * Custom expressions are defined by `${{ ... }}`. This is useful for pulling attributes/context defined elsewhere.
+
+# Workflows & Events - Deep Dive
+
+* Most events are repository related but others exist such as workflow/schedule related.
+* Workflow triggers: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+* 

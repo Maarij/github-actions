@@ -8,7 +8,7 @@
   The file name can be any custom name different then the name defined in the file.
 * The `name` keyword of a workflow is user defined and serves a purpose similar to a "Subject".
 * The `on` keyword is similar to the triggers. This decides how a workflow should start.
-    * Common examples used are `push` or `workflow_dispatch`
+    * Common examples used are `push`, `workflow_dispatch`, and `issues`.
     * `workflow_dispatch` allows you to manually trigger a build rather than on an event
 * Multiple `jobs` can be defined in a single action. These can be parallel or sequential.
 * Each job needs a type of server it will run on specified with the `runs-on` keyword.

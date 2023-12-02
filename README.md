@@ -23,3 +23,5 @@
 * Activity types and Event Filters give more control over workflow triggers
   * Documentation contains activity types that can be used on a webhook event
   * Event filters can be found in workflow syntax documentation
+* Workflows can be cancelled manually if you recognize errors
+* Workflows can be skipped by adding `[skip ci]` to the commit message

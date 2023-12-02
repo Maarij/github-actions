@@ -1,6 +1,7 @@
 name: Deployment Exercise 1
 
-on: push
+#on: push
+on: workflow_dispatch
 
 jobs:
   deploy:

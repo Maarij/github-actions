@@ -29,9 +29,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: dist-files
-          path: |
-            ./gh-data/dist
-            ./gh-data/package.json
+          path: ./gh-data/dist
   deploy:
     needs: build
     runs-on: ubuntu-latest

@@ -49,3 +49,8 @@
 * GitHub environment secrets are used for environment specific secrets such as databases.
   * You can define this inside your job with the `environment` keyword.
   * This helps separate environment jobs and environment branches
+
+# Controlling Workflow & Job Execution
+
+* Jobs and Steps can be executed conditionally
+  * `if` and `continue-on-error` are examples of this. We can evaluate conditions via expressions.

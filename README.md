@@ -32,3 +32,6 @@
   * Can download and use manually or in other jobs via actions
 * upload-artifact provided by GitHub actions team. download-artifact allows use in deployment.
 * Job outputs can be values used by subsequent jobs. An example is a file generated in a previous build step.
+* Caching  can reduce workflow time for common steps such as `install dependencies` or reused files.
+  * GitHub provides the `actions/cache@...` for this common use case.
+  * Cached dependencies are available across workflow executions. 

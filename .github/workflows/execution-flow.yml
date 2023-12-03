@@ -1,9 +1,9 @@
 name: Execution Flow
 
-on:
-  push:
-    branches:
-      - main
+on: workflow_dispatch
+#  push:
+#    branches:
+#      - main
 
 jobs:
   lint:
@@ -18,9 +18,10 @@ jobs:
           path: ~/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --prefix ./controlling-workflow-execution
       - name: Lint code
-        run: npm run lint
+        run: npm run lint --prefix ./controlling-workflow-execution
+
   test:
     runs-on: ubuntu-latest
     steps:
@@ -33,14 +34,15 @@ jobs:
           path: ~/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --prefix ./controlling-workflow-execution
       - name: Test code
-        run: npm run test
+        run: npm run test --prefix ./controlling-workflow-execution
       - name: Upload test report
         uses: actions/upload-artifact@v3
         with:
           name: test-report
           path: test.json
+
   build:
     needs: test
     runs-on: ubuntu-latest
@@ -54,10 +56,10 @@ jobs:
           path: ~/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --prefix ./controlling-workflow-execution
       - name: Build website
         id: build-website
-        run: npm run build
+        run: npm run build --prefix ./controlling-workflow-execution
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:

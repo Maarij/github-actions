@@ -2,13 +2,13 @@ name: Events Demo 1
 
 on:
   workflow_dispatch:
-  pull_request:
-    types:
-      - opened
-    branches:
-      - main      # main
-      - 'dev-*'   # dev-new, etc
-      - 'feat/**' # feat/new feat/new/button
+#  pull_request:
+#    types:
+#      - opened
+#    branches:
+#      - main      # main
+#      - 'dev-*'   # dev-new, etc
+#      - 'feat/**' # feat/new feat/new/button
   push:
     branches:
       - main      # main

@@ -37,3 +37,8 @@
   * GitHub provides the `actions/cache@...` for this common use case.
   * Cached dependencies are available across workflow executions. 
   * Caching should not be used for outputs such as artifacts
+
+# Using Environment Variables & Secrets
+
+* Portions of code may involve dynamic values from environments variables such as credentials, ports
+* 

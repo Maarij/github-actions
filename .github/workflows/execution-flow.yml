@@ -69,7 +69,8 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: dist-files
-          path: dist
+          path: ./controlling-workflow-execution/dist
+
   deploy:
     needs: build
     runs-on: ubuntu-latest

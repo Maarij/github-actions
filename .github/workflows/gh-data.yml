@@ -1,4 +1,4 @@
-name: Deploy website
+name: GitHub Data
 
 on: workflow_dispatch
 #  push:

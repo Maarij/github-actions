@@ -15,9 +15,10 @@ jobs:
         id: cache
         uses: actions/cache@v3
         with:
-          path: ~/.npm
+          path: node_modules
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true`
         run: npm ci --prefix ./controlling-workflow-execution
       - name: Lint code
         run: npm run lint --prefix ./controlling-workflow-execution
@@ -34,6 +35,7 @@ jobs:
           path: ~/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true`
         run: npm ci --prefix ./controlling-workflow-execution
       - name: Test code
         id: run-tests
@@ -58,6 +60,7 @@ jobs:
           path: ~/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true`
         run: npm ci --prefix ./controlling-workflow-execution
       - name: Build website
         id: build-website

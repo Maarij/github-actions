@@ -34,7 +34,7 @@
 * upload-artifact provided by GitHub actions team. download-artifact allows use in deployment.
 * Job outputs can be values used by subsequent jobs. An example is a file generated in a previous build step.
 * Caching  can reduce workflow time for common steps such as `install dependencies` or reused files.
-  * GitHub provides the `actions/cache@...` for this common use case.
+  * GitHub provides the `actions/cache@...` for tmaarijmmaarijhis common use case.
   * Cached dependencies are available across workflow executions. 
   * Caching should not be used for outputs such as artifacts
 
@@ -43,3 +43,6 @@
 * Portions of code may involve dynamic values from environments variables such as credentials, ports
 * `env` is a keyword that can be set on a workflow level for a variable consistent between jobs
   * This can also be defined on the job level for more precision
+* GitHub Actions provides default environment variables that are set automatically - find these in the docs
+* GitHub Actions allows you to store secrets for values you don't want to expose. You can access these with the 
+`secrets` context object

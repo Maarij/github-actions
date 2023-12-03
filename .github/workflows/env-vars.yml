@@ -28,15 +28,17 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefix ./env-vars
       - name: Run server
-        run: npm start & npx wait-on http://127.0.0.1:XYZ
-      - name: Run tests --prefix ./env-vars
-        run: npm test
+        run: npm start  --prefix ./env-vars & npx wait-on http://127.0.0.1:$PORT
+      - name: Run tests
+        run: npm test  --prefix ./env-vars
       - name: Output information
-        run: echo "..."
+        run: echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"
   deploy:
     needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Output information
         run: |
-          echo "..."
+          echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"
+          echo "MONGODB_DB_NAME: ${{ env.MONGODB_DB_NAME }}"
+          

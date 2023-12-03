@@ -1,9 +1,11 @@
-name: Deployment
+name: Ennvironment Variables
+
 on:
   push:
     branches:
       - main
       - dev
+
 jobs:
   test:
     environment: testing
@@ -29,5 +31,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output information
-        run: |        
+        run: |
           echo "..."

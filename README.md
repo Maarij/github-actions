@@ -54,4 +54,6 @@
 
 * Jobs and Steps can be executed conditionally
   * `if` and `continue-on-error` are examples of this. We can evaluate conditions via expressions.
-  * These work well when you need to evaluate prior step outcomes/conclusions.
+  * These work well when you need to evaluate prior step outcomes/conclusions which trigger special condition functions
+    * `failure()`, `success()`, `always()`, `cancelled()` -- Docs contain definitions
+* 

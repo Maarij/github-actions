@@ -41,4 +41,5 @@
 # Using Environment Variables & Secrets
 
 * Portions of code may involve dynamic values from environments variables such as credentials, ports
-* 
+* `env` is a keyword that can be set on a workflow level for a variable consistent between jobs
+  * This can also be defined on the job level for more precision

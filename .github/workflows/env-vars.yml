@@ -1,13 +1,20 @@
-name: Ennvironment Variables
+name: Environment Variables
 
-on:
-  push:
-    branches:
-      - main
-      - dev
+on: workflow_dispatch
+#  push:
+#    branches:
+#      - main
+
+env:
+  MONGODB_DB_NAME: gha-demo
 
 jobs:
   test:
+    env:
+        MONGODB_CLUSTER_ADDRESS: ...
+        MONGODB_USERNAME: ...
+        MONGODB_PASSWORD:  ...
+        PORT: ...
     environment: testing
     runs-on: ubuntu-latest
     steps:
@@ -19,10 +26,10 @@ jobs:
           path: ~/.npm
           key: npm-deps-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --prefix ./env-vars
       - name: Run server
         run: npm start & npx wait-on http://127.0.0.1:XYZ
-      - name: Run tests
+      - name: Run tests --prefix ./env-vars
         run: npm test
       - name: Output information
         run: echo "..."

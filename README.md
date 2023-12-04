@@ -57,3 +57,4 @@
   * These work well when you need to evaluate prior step outcomes/conclusions which trigger special condition functions
     * `failure()`, `success()`, `always()`, `cancelled()` -- Docs contain definitions
     * If these are placed at a job level, they execute if any other job meets that check (`needs` defined).
+* `matrix` allows you to run the same job but with different configurations (ubuntu, windows, node version, etc). 

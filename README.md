@@ -59,3 +59,4 @@
     * If these are placed at a job level, they execute if any other job meets that check (`needs` defined).
 * `matrix` allows you to run the same job but with different configurations (ubuntu, windows, node version, etc).
 These run in parallel.
+  * `include` allows you to add stand-alone combinations. `exclude` can be used to remove pieces from a combination.

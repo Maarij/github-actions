@@ -60,3 +60,5 @@
 * `matrix` allows you to run the same job but with different configurations (ubuntu, windows, node version, etc).
 These run in parallel.
   * `include` allows you to add stand-alone combinations. `exclude` can be used to remove pieces from a combination.
+* Workflows can be made reusable. This is common for a deployment. These can be used in other workflows through the 
+`workflow_call` trigger.

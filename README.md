@@ -66,4 +66,5 @@ These run in parallel.
 # Building & Using Custom Actions
 
 * 3 main types: JavaScript, Docker, and Composite actions
-* 
+* For composite action, `action.yml` is a required named file created that is executed
+* Do not need a trigger since they are part of another workflow

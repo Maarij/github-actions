@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: test-report
-          path: ./custom-actions/test.json
+          path: test.json
   build:
     needs: test
     runs-on: ubuntu-latest
